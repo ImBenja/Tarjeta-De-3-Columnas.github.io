@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores Primarios*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Colores Neutrales */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  background: var(--Very-light-gray);
+}
+
+main {
+  margin: 2rem 0 0 0;
+  padding: 0 2rem;
+}
+
+.Container-Columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.Container {
+  padding: 40px 32px;
+  height: 380px;
+}
+
+.Title {
+  font-family: "Big Shoulders Display", sans-serif;
+  color: var(--Very-light-gray);
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.Sub-Text {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+  font-weight: 400;
+}
+
+.button {
+  background: var(--Very-light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1em;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  border: 2px solid var(--Transparent-white);
+  cursor: pointer;
+}
+
+.Card-Orange {
+  background: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Card-Orange .button {
+  color: var(--bright-orange);
+}
+.Card-Orange .button:hover {
+  background: var(--bright-orange);
+  color: var(--Transparent-white);
+}
+
+.Card-Cyan {
+  background: var(--dark-cyan);
+}
+
+.Card-Cyan .button {
+  color: var(--dark-cyan);
+}
+.Card-Cyan .button:hover {
+  background: var(--dark-cyan);
+  color: var(--Transparent-white);
+}
+
+.Card-Dark-Cyan {
+  background: var(--very-dark-cyan);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Card-Dark-Cyan .button {
+  color: var(--very-dark-cyan);
+}
+.Card-Dark-Cyan .button:hover {
+  background: var(--very-dark-cyan);
+  color: var(--Transparent-white);
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin: 6rem 0 0 0;
+    padding: 0 12rem;
+  }
+
+  .Container-Columns {
+    flex-direction: row;
+  }
+
+  .Container {
+    height: 500px;
+    padding: 40px 50px;
+  }
+
+  .button {
+    padding: 15px 35px;
+    margin-top: 6rem;
+  }
+
+  .Card-Orange {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .Card-Dark-Cyan {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+}
